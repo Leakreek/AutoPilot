@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.autopilot.AddRefuelController">
+
+    <Label text="Dodaj tankowanie"/>
+    <TextField fx:id="litersField" promptText="Litry paliwa"/>
+    <TextField fx:id="priceField" promptText="Cena (zł)"/>
+    <Button text="Zapisz" onAction="#handleSave"/>
+
+    <Separator/>
+
+    <Label text="Historia tankowań"/>
+    <ListView fx:id="historyList" prefHeight="150"/>
+</VBox>

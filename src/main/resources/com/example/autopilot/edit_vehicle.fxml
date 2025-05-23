@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.autopilot.EditVehicleController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Edytuj dane pojazdu" style="-fx-font-weight: bold; -fx-font-size: 16px"/>
+
+    <TextField fx:id="rejestracjaField" promptText="Nowy numer rejestracyjny"/>
+    <TextField fx:id="przebiegField" promptText="Nowy przebieg"/>
+
+    <HBox spacing="10">
+        <Button text="Zapisz" onAction="#onSave"/>
+        <Button text="Anuluj" onAction="#onCancel"/>
+    </HBox>
+</VBox>

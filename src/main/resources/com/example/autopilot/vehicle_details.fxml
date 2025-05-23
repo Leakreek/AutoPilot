@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.autopilot.VehicleDetailsController">
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Informacje o pojeździe" style="-fx-font-size: 16px; -fx-font-weight: bold"/>
+                <Button text="Edytuj" onAction="#onEditInfo"/>
+            </HBox>
+
+            <GridPane hgap="10" vgap="10">
+                <Label text="Typ pojazdu:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="typField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Marka:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="markaField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Model:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="modelField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Rok produkcji:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="rokField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Nr rejestracyjny:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="rejestracjaField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Typ silnika:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="typSilnikaField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Pojemność silnika:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="pojemnoscField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Moc silnika:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <TextField fx:id="mocField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                <Label text="Przebieg:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                <TextField fx:id="przebiegField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                <Label text="Ubezpieczenie do:" GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+                <TextField fx:id="ubezpieczenieField" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+                <Label text="Przegląd do:" GridPane.rowIndex="10" GridPane.columnIndex="0"/>
+                <TextField fx:id="przegladField" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+
+                <Label text="Średnie spalanie:" GridPane.rowIndex="11" GridPane.columnIndex="0"/>
+                <Label fx:id="srednieSpalanieLabel" GridPane.rowIndex="11" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="Zdarzenia eksploatacyjne" style="-fx-font-size: 16px; -fx-font-weight: bold"/>
+            <HBox spacing="10">
+                <Button text="Dodaj tankowanie" onAction="#onAddRefuel"/>
+                <Button text="Dodaj przebieg" onAction="#onAddMileage"/>
+                <Button text="Dodaj przegląd" onAction="#onAddInspection"/>
+                <Button text="Dodaj ubezpieczenie" onAction="#onAddInsurance"/>
+                <Button text="Dodaj koszt" onAction="#onAddCost"/>
+            </HBox>
+
+            <Label text="Kosztorys:" style="-fx-font-weight: bold"/>
+            <ListView fx:id="kosztorysList" prefHeight="150"/>
+            <Label fx:id="sumaKosztowLabel" style="-fx-font-weight: bold"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
