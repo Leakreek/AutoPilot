@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autopilot.AddMileageController">
-
-    <Label text="Dodaj przebieg"/>
-    <TextField fx:id="kmField" promptText="Przejechane km"/>
-    <Button text="Zapisz" onAction="#handleSave"/>
+<?xml version="1.0" encoding="utf-8"?>
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?><VBox alignment="CENTER" fx:controller="com.example.autopilot.AddMileageController" spacing="10" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml">
+<Label text="Dodaj przebieg"/>
+<TextField fx:id="kmField" promptText="Przejechane km"/>
+<Button onAction="#handleSave" text="Zapisz"/>
 </VBox>

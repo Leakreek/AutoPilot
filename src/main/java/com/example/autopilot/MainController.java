@@ -32,8 +32,13 @@ public class MainController {
     private void onAddVehicle() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("add_vehicle.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Dodaj pojazd");
             stage.showAndWait();
             loadVehicles(); // odśwież listę po zamknięciu okna
@@ -80,10 +85,18 @@ public class MainController {
             Vehicle selected = pojazdy.get(index);
 
             try {
+
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("vehicle_details.fxml"));
+                Scene scene = new Scene(loader.load());
+
+// Dodaj arkusz stylów
+                scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
                 Stage stage = new Stage();
-                stage.setScene(new Scene(loader.load()));
+                stage.setScene(scene);
                 stage.setTitle("Szczegóły pojazdu");
+                stage.show();
+
 
                 VehicleDetailsController controller = loader.getController();
                 controller.setVehicle(selected);

@@ -1,22 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autopilot.AddCostController"
-      spacing="10" alignment="CENTER">
-
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
-    </padding>
-
-    <Label text="Dodaj koszt" style="-fx-font-size: 16px;"/>
-
-    <TextField fx:id="descriptionField" promptText="Opis kosztu"/>
-    <TextField fx:id="amountField" promptText="Kwota (zł)"/>
-
-    <Button text="Zapisz" onAction="#handleSave"/>
+<?xml version="1.0" encoding="utf-8"?>
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.geometry.Insets?><VBox alignment="CENTER" fx:controller="com.example.autopilot.AddCostController" spacing="10" stylesheets="@style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+<padding>
+<Insets bottom="20" left="20" right="20" top="20"/>
+</padding>
+<Label style="-fx-font-size: 16px;" text="Dodaj koszt"/>
+<TextField fx:id="descriptionField" promptText="Opis kosztu"/>
+<TextField fx:id="amountField" promptText="Kwota (zł)"/>
+<Button onAction="#handleSave" text="Zapisz"/>
 </VBox>

@@ -1,31 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-
-<VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autopilot.AddVehicleController"
-      spacing="10" alignment="CENTER">
-
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
-    </padding>
-
-    <Label text="Dodaj pojazd" style="-fx-font-size: 18px;"/>
-
-    <TextField fx:id="typPojazduField" promptText="Typ pojazdu"/>
-    <TextField fx:id="markaField" promptText="Marka"/>
-    <TextField fx:id="modelField" promptText="Model"/>
-    <TextField fx:id="rokField" promptText="Rok produkcji"/>
-    <TextField fx:id="rejestracjaField" promptText="Nr rejestracyjny"/>
-    <TextField fx:id="typSilnikaField" promptText="Typ silnika"/>
-    <TextField fx:id="pojemnoscField" promptText="Pojemność silnika (l)"/>
-    <TextField fx:id="mocField" promptText="Moc silnika (KM)"/>
-    <TextField fx:id="przebiegField" promptText="Przebieg (km)"/>
-    <DatePicker fx:id="ubezpieczenieField" promptText="Ubezpieczenie do"/>
-    <DatePicker fx:id="przegladField" promptText="Przegląd do"/>
-
-
-    <Button text="Zapisz" onAction="#handleSave"/>
+<?xml version="1.0" encoding="utf-8"?>
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.geometry.Insets?><VBox alignment="CENTER" fx:controller="com.example.autopilot.AddVehicleController" spacing="10" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml">
+<padding>
+<Insets bottom="20" left="20" right="20" top="20"/>
+</padding>
+<Label style="-fx-font-size: 18px;" text="Dodaj pojazd"/>
+<TextField fx:id="typPojazduField" promptText="Typ pojazdu"/>
+<TextField fx:id="markaField" promptText="Marka"/>
+<TextField fx:id="modelField" promptText="Model"/>
+<TextField fx:id="rokField" promptText="Rok produkcji"/>
+<TextField fx:id="rejestracjaField" promptText="Nr rejestracyjny"/>
+<TextField fx:id="typSilnikaField" promptText="Typ silnika"/>
+<TextField fx:id="pojemnoscField" promptText="Pojemność silnika (l)"/>
+<TextField fx:id="mocField" promptText="Moc silnika (KM)"/>
+<TextField fx:id="przebiegField" promptText="Przebieg (km)"/>
+<DatePicker fx:id="ubezpieczenieField" promptText="Ubezpieczenie do"/>
+<DatePicker fx:id="przegladField" promptText="Przegląd do"/>
+<Button onAction="#handleSave" text="Zapisz"/>
 </VBox>

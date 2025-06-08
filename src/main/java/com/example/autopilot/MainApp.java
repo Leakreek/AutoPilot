@@ -17,6 +17,7 @@ public class MainApp extends Application {
         // Ładowanie widoku głównego
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("AutoPilot – Organizer Pojazdów");
         stage.setScene(scene);
         stage.show();

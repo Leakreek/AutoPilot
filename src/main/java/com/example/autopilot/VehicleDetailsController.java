@@ -72,8 +72,10 @@ public class VehicleDetailsController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("add_refuel.fxml"));
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
-            stage.setTitle("Dodaj tankowanie");
+            Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+            stage.setScene(scene);
+            stage.showAndWait();stage.setTitle("Dodaj tankowanie");
 
             AddRefuelController controller = loader.getController();
             controller.setVehicle(vehicle);
@@ -91,8 +93,13 @@ public class VehicleDetailsController {
     private void onAddMileage() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("add_mileage.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Dodaj przebieg");
 
             AddMileageController controller = loader.getController();
@@ -111,8 +118,13 @@ public class VehicleDetailsController {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("add_cost.fxml")); // ← TO BYŁO POMINIĘTE
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Dodaj koszt");
 
             AddCostController controller = loader.getController();
@@ -155,8 +167,13 @@ public class VehicleDetailsController {
     private void onEditInfo() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("edit_vehicle.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Edytuj pojazd");
 
             EditVehicleController controller = loader.getController();
@@ -176,8 +193,13 @@ public class VehicleDetailsController {
     private void onEditVehicle() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("edit_vehicle.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Edytuj pojazd");
 
             EditVehicleController controller = loader.getController();
@@ -193,8 +215,13 @@ public class VehicleDetailsController {
     private void onAddInspection() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("add_inspection.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Dodaj przegląd");
 
             AddInspectionController controller = loader.getController();
@@ -213,8 +240,13 @@ public class VehicleDetailsController {
     private void onAddInsurance() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("add_insurance.fxml"));
+            Scene scene = new Scene(loader.load());
+
+            // Dodaj style.css
+            scene.getStylesheets().add(getClass().getResource("/com/example/autopilot/style.css").toExternalForm());
+
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
+            stage.setScene(scene);
             stage.setTitle("Dodaj ubezpieczenie");
 
             AddInsuranceController controller = loader.getController();

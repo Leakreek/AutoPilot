@@ -1,22 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-
-<VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autopilot.AddInspectionController"
-      spacing="10" alignment="CENTER">
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
-    </padding>
-
-    <Label text="Dodaj przegląd pojazdu" style="-fx-font-weight: bold; -fx-font-size: 16px"/>
-    <DatePicker fx:id="dateField" promptText="Data przeglądu"/>
-    <TextField fx:id="amountField" promptText="Koszt przeglądu (zł)"/>
-
-    <HBox spacing="10">
-        <Button text="Zapisz" onAction="#onSave"/>
-        <Button text="Anuluj" onAction="#onCancel"/>
-    </HBox>
+<?xml version="1.0" encoding="utf-8"?>
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?><?import javafx.geometry.Insets?><VBox alignment="CENTER" fx:controller="com.example.autopilot.AddInspectionController" spacing="10" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml">
+<padding>
+<Insets bottom="20" left="20" right="20" top="20"/>
+</padding>
+<Label style="-fx-font-weight: bold; -fx-font-size: 16px" text="Dodaj przegląd pojazdu"/>
+<DatePicker fx:id="dateField" promptText="Data przeglądu"/>
+<TextField fx:id="amountField" promptText="Koszt przeglądu (zł)"/>
+<HBox spacing="10">
+<Button onAction="#onSave" text="Zapisz"/>
+<Button onAction="#onCancel" text="Anuluj"/>
+</HBox>
 </VBox>

@@ -1,19 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-
-<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.autopilot.MainController">
-
-    <ListView fx:id="vehicleList" prefHeight="300"/>
-
-    <HBox spacing="10" alignment="CENTER">
-        <Button text="Dodaj pojazd" onAction="#onAddVehicle"/>
-        <Button text="Usuń" onAction="#onDeleteVehicle"/>
-        <Button text="Wybierz" onAction="#onSelectVehicle"/>
-    </HBox>
+<?xml version="1.0" encoding="utf-8"?>
+<?import javafx.geometry.Insets?><?import javafx.scene.control.Button?><?import javafx.scene.control.ListView?><?import javafx.scene.layout.VBox?><?import javafx.scene.layout.HBox?><VBox alignment="CENTER" fx:controller="com.example.autopilot.MainController" spacing="10" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml">
+<ListView fx:id="vehicleList" prefHeight="300"/>
+<HBox alignment="CENTER" spacing="10">
+<Button onAction="#onAddVehicle" text="Dodaj pojazd"/>
+<Button onAction="#onDeleteVehicle" text="Usuń"/>
+<Button onAction="#onSelectVehicle" text="Wybierz"/>
+</HBox>
 </VBox>
