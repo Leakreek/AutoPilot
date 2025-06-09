@@ -29,7 +29,7 @@ public class AddRefuelController {
             RefuelEvent refuel = new RefuelEvent(liters, price, LocalDate.now());
             vehicle.addRefuel(refuel);
 
-            // 💾 Zapisz do bazy danych
+
             Database.insertRefuel(vehicle.getId(), refuel);
 
             updateHistory();
@@ -38,7 +38,7 @@ public class AddRefuelController {
             stage.close();
 
         } catch (NumberFormatException e) {
-            e.printStackTrace(); // możesz zamienić na alert
+            e.printStackTrace();
         }
     }
 

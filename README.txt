@@ -41,12 +41,3 @@
 
 ---
 
-##  Stylizacja / co możecie zrobić
-
-Projekt działa w pełni. Możecie się pobawić:
-
-- Stylizacją GUI (kolory, czcionki, układ)
-- Dodaniem ikonek, lepszego wyglądu przycisków
-- Responsywnością i dopieszczeniem wyglądu
-
-This type

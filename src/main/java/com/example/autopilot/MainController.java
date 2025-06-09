@@ -44,8 +44,7 @@ public class MainController {
             loadVehicles(); // odśwież listę po zamknięciu okna
 
 
-            // odświeżenie listy (na później)
-            // loadVehicles();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

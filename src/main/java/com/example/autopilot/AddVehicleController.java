@@ -42,7 +42,7 @@ public class AddVehicleController {
             stage.close();
         } catch (Exception e) {
             e.printStackTrace();
-            // Możesz dodać komunikat błędu do użytkownika, np. przez Alert
+
         }
     }
 }

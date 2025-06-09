@@ -43,9 +43,9 @@ public class EditVehicleController {
         }
 
         // Zapisz do bazy danych
-        Database.updateVehicle(vehicle); // Upewnij się, że ta metoda istnieje
+        Database.updateVehicle(vehicle);
 
-        // Odśwież widok w oknie szczegółów pojazdu
+
         if (parentController != null) {
             parentController.updateVehicleDetails();
         }

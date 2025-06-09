@@ -23,14 +23,14 @@ public class AddMileageController {
             MileageEvent event = new MileageEvent(km, LocalDate.now());
             vehicle.addMileage(event);
 
-            // 💾 Zapisz do bazy danych
+            // Zapisz do bazy danych
             Database.insertMileage(vehicle.getId(), event);
 
             Stage stage = (Stage) kmField.getScene().getWindow();
             stage.close();
 
         } catch (NumberFormatException e) {
-            e.printStackTrace(); // możesz zamienić na alert
+            e.printStackTrace();
         }
     }
 }
